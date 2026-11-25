@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><title>Loop // Signal Details</title><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed-variant":"#653e00","on-secondary":"#1000a9","outline-variant":"#3e484f","surface":"#121318","inverse-primary":"#00668a","surface-container-low":"#1a1b21","on-secondary-fixed":"#07006c","on-tertiary-fixed":"#2a1700","surface-bright":"#38393f","error":"#ffb4ab","secondary-container":"#3131c0","on-primary-fixed-variant":"#004c69","inverse-on-surface":"#2f3036","secondary-fixed-dim":"#c0c1ff","surface-dim":"#121318","on-surface":"#e3e1e9","surface-variant":"#34343a","surface-container-high":"#292a2f","primary-fixed-dim":"#7bd0ff","on-primary":"#00354a","on-error":"#690005","background":"#121318","surface-tint":"#7bd0ff","surface-container-highest":"#34343a","on-tertiary":"#472a00","on-secondary-container":"#b0b2ff","outline":"#87929a","primary":"#8ed5ff","error-container":"#93000a","tertiary":"#ffc176","on-primary-fixed":"#001e2c","on-background":"#e3e1e9","secondary":"#c0c1ff","on-tertiary-container":"#613b00","on-primary-container":"#004965","tertiary-fixed":"#ffddb8","inverse-surface":"#e3e1e9","surface-container-lowest":"#0d0e13","on-error-container":"#ffdad6","primary-container":"#38bdf8","on-surface-variant":"#bdc8d1","primary-fixed":"#c4e7ff","surface-container":"#1e1f25","on-secondary-fixed-variant":"#2f2ebe","secondary-fixed":"#e1e0ff","tertiary-fixed-dim":"#ffb960","tertiary-container":"#f1a02b"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-xs":"0.25rem","space-2xs":"0.125rem","space-base":"1rem","space-sm":"0.5rem","space-lg":"1.5rem",gutter:"1rem","space-2xl":"3rem","space-xl":"2rem","margin-tablet":"1.5rem","gutter-sm":"0.75rem",margin:"1rem","space-md":"0.75rem"},fontFamily:{"body-md":["Inter"],"headline-lg":["Geist"],"code-inline":["JetBrains Mono"],"label-sm":["Geist"],"body-sm":["Inter"],"label-md":["Geist"],"body-lg":["Inter"],"headline-sm":["Geist"],"headline-md":["Geist"],"headline-xl-mobile":["Geist"],"headline-xl":["Geist"]},fontSize:{"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg":["24px",{lineHeight:"30px",letterSpacing:"-0.02em",fontWeight:"600"}],"code-inline":["13px",{lineHeight:"18px",fontWeight:"500"}],"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.06em",fontWeight:"700"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.005em",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"22px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"26px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-xl-mobile":["28px",{lineHeight:"34px",letterSpacing:"-0.025em",fontWeight:"700"}],"headline-xl":["36px",{lineHeight:"44px",letterSpacing:"-0.03em",fontWeight:"700"}]}}};</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#121318;color:#e3e1e9;-webkit-tap-highlight-color:transparent;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go Back" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-md text-headline-md font-semibold tracking-tight text-on-surface truncate max-w-[200px]">Redemption Terminal</h1></div><div class="flex items-center gap-space-sm"><button aria-label="Share Deal" class="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">share</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-10">
+<!-- Bottom Sheet Card Surface Container -->
+<div class="bg-surface-container-low rounded-t-full shadow-2xl relative w-full pt-3 px-4 pb-8 flex flex-col space-y-4">
+<!-- Grabber Handle & Header Utilities -->
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+          Direct Redemption
+        </span>
+<span class="text-on-surface-variant font-label-md text-label-md">#Hosting</span>
+</div>
+<div class="w-12 h-1 bg-surface-variant rounded-full mx-auto self-center absolute left-1/2 -translate-x-1/2 top-2.5"></div>
+<button aria-label="Dismiss Sheet" class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" onclick="history.back()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Live Social Proof Toast Ticker -->
+<div class="bg-surface-container/90 px-3 py-1.5 rounded-lg flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2 min-w-0">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<p class="font-body-sm text-body-sm text-on-surface truncate" id="proof-text">
+<strong class="font-semibold text-primary">Alex K.</strong> claimed coupon 2m ago
+        </p>
+</div>
+<span class="font-code-inline text-code-inline text-on-surface-variant shrink-0 ml-2">99.4% Success Rate</span>
+</div>
+<!-- Hero Deal Voucher Terminal -->
+<div class="relative overflow-hidden bg-surface-container-highest rounded-xl p-4 shadow-xl">
+<!-- Glow Accent Backing -->
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-primary/15 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -left-10 w-28 h-28 bg-tertiary/15 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-3">
+<!-- Brand & Deal Title -->
+<div class="flex items-start justify-between gap-3">
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md uppercase tracking-wider text-tertiary">Verified Exclusive</span>
+<span class="material-symbols-outlined text-tertiary text-[14px]">verified</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight mt-0.5">
+              Bluehost AI Builder
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+              100% OFF All AI Builder Plans
+            </p>
+</div>
+<div class="text-right shrink-0">
+<div class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">$0.00</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant line-through">was $80.00/yr</div>
+</div>
+</div>
+<!-- Urgency Meter & Countdown Clock -->
+<div class="bg-surface-container-low px-3 py-2 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-tertiary">
+<span class="material-symbols-outlined text-[16px] animate-pulse">timer</span>
+<span class="font-label-sm text-label-sm uppercase">Expires in</span>
+</div>
+<div class="flex items-center gap-1 font-code-inline text-code-inline font-medium text-on-surface">
+<span class="bg-surface px-1.5 py-0.5 rounded text-primary">18h</span>:
+            <span class="bg-surface px-1.5 py-0.5 rounded text-primary">42m</span>:
+            <span class="bg-surface px-1.5 py-0.5 rounded text-tertiary" id="countdown-sec">11s</span>
+</div>
+</div>
+<!-- Copyable Promo Code Ticket Box -->
+<div class="bg-surface-container rounded-lg p-2.5 flex items-center justify-between gap-2 shadow-inner">
+<div class="flex flex-col min-w-0 pl-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Voucher Code</span>
+<span class="font-code-inline text-headline-sm text-primary tracking-wider font-bold truncate" id="coupon-val">FREEMONTH</span>
+</div>
+<button class="shrink-0 bg-primary text-on-primary font-label-md text-label-md px-3.5 py-2.5 rounded-lg flex items-center gap-1.5 active:scale-95 transition-all shadow-md" id="copy-btn" onclick="copyCouponCode()">
+<span class="material-symbols-outlined text-[16px]" id="copy-icon">content_copy</span>
+<span id="copy-label">Copy Code</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Visual Media Card (Product Snapshot) -->
+<div class="relative w-full h-28 rounded-xl overflow-hidden shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Futuristic cyber-minimalist user interface preview of Bluehost AI website generator on dark slate display with electric cyan and warm amber accent lines, high tech clean layout, soft ambient glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj1VXi9HXXjdRYrJ5sGsH8mjALBeW-gY4aiWNucMsH86hBAO0K-FTATViRdqhwHi35lYFbCoXfwQiNy_kK_HlHkwf0LO0nOXd5hZ9Ybr0W2vpXfdI2WHznQG-TnLN75kyzguXUqIXmLZRn1WXDgLTAsZzMWQqXlR-B0lsY5CJkp5mGj5AB3mQGc_Vxe7gkADTs1nTnxWzWZibRnRa3EX2oGSywPeexmCDUn8-UULg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-3 flex items-center gap-2">
+<span class="bg-surface/90 text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded backdrop-blur">AI Design Generation</span>
+<span class="bg-surface/90 text-tertiary font-label-sm text-label-sm px-2 py-0.5 rounded backdrop-blur">Free 1st Month</span>
+</div>
+</div>
+<!-- 30-Second TL;DR Breakdown (TikTok-Speed Expandables) -->
+<div class="flex flex-col space-y-2">
+<div class="flex items-center justify-between px-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Quick TL;DR Breakdown</h3>
+<span class="font-label-sm text-label-sm text-primary uppercase">30s Read</span>
+</div>
+<!-- Card 1: What You Get -->
+<div class="bg-surface-container rounded-lg overflow-hidden transition-all shadow-sm">
+<button class="w-full p-3 flex items-center justify-between text-left" onclick="toggleCard('tldr-1', 'arrow-1')">
+<div class="flex items-center gap-2.5">
+<div class="w-6 h-6 rounded bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">What You Get</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform duration-200" id="arrow-1">expand_more</span>
+</button>
+<div class="px-3 pb-3 pt-0" id="tldr-1">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Full 100% discount on first month of Bluehost AI Builder (Lite, Standard, or Pro). Includes custom intelligent layout creation, free domain setup, and managed WordPress runtime.
+          </p>
+</div>
+</div>
+<!-- Card 2: Fine Print (No Catch) -->
+<div class="bg-surface-container rounded-lg overflow-hidden transition-all shadow-sm">
+<button class="w-full p-3 flex items-center justify-between text-left" onclick="toggleCard('tldr-2', 'arrow-2')">
+<div class="flex items-center gap-2.5">
+<div class="w-6 h-6 rounded bg-tertiary/10 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">format_image_left</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">The Fine Print (No Catch)</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform duration-200" id="arrow-2">expand_more</span>
+</button>
+<div class="px-3 pb-3 pt-0" id="tldr-2">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Eligible for new accounts. Standard checkout requires a payment method on file to activate cloud hosting. Cancel anytime before day 30 with 1 click to avoid standard renewal rates.
+          </p>
+</div>
+</div>
+<!-- Card 3: Who This Is For -->
+<div class="bg-surface-container rounded-lg overflow-hidden transition-all shadow-sm">
+<button class="w-full p-3 flex items-center justify-between text-left" onclick="toggleCard('tldr-3', 'arrow-3')">
+<div class="flex items-center gap-2.5">
+<div class="w-6 h-6 rounded bg-secondary-container/30 text-secondary-fixed-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Who This Is For</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform duration-200" id="arrow-3">expand_more</span>
+</button>
+<div class="px-3 pb-3 pt-0" id="tldr-3">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Founders, vibe coders, freelancers, and indie-hackers who need a fast, polished landing page up in under 10 minutes without paying early-stage hosting overhead.
+          </p>
+</div>
+</div>
+</div>
+<!-- Direct Affiliate CTA Terminal Gateway -->
+<div class="pt-2 flex flex-col space-y-2">
+<a class="w-full py-3.5 px-4 rounded-xl bg-primary text-on-primary font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-2 text-center shadow-lg active:scale-98 transition-transform" href="https://bluehost.sjv.io/Gb9W56" rel="noopener noreferrer" target="_blank">
+<span>Launch Bluehost &amp; Auto-Apply FREEMONTH</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<!-- Disclosure -->
+<p class="text-center font-label-sm text-label-sm text-on-surface-variant px-4 leading-normal">
+        Reader-supported: We may earn commission at no extra cost to you when you activate verified publisher perks.
+      </p>
+</div>
+<!-- Alternative Related Deals Slider -->
+<div class="pt-3 flex flex-col space-y-2.5">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface uppercase tracking-wider">Alternative Drops</span>
+<span class="font-label-sm text-label-sm text-tertiary">Active Today</span>
+</div>
+<div class="flex gap-2.5 overflow-x-auto pb-2 -mx-4 px-4 scrollbar-none">
+<!-- Alt Deal 1: Hostinger -->
+<div class="w-52 shrink-0 bg-surface-container p-3 rounded-xl flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-1.5 py-0.5 rounded">HOSTING</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-inline">RESOURIFY</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-semibold text-on-surface truncate">Hostinger 85% Off</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">Up to 85% off yearly hosting + 2x AI builder credits</p>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between">
+<span class="font-code-inline text-code-inline text-tertiary font-bold">Code: RESOURIFY</span>
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward_ios</span>
+</div>
+</div>
+<!-- Alt Deal 2: Claude Credits -->
+<div class="w-52 shrink-0 bg-surface-container p-3 rounded-xl flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary/10 px-1.5 py-0.5 rounded">CREDITS</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-inline">GRANT</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-semibold text-on-surface truncate">Claude $250k Grants</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">Free API credits, startup vouchers &amp; student access</p>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between">
+<span class="font-code-inline text-code-inline text-tertiary font-bold">$250K Tier</span>
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward_ios</span>
+</div>
+</div>
+<!-- Alt Deal 3: OpenArt AI -->
+<div class="w-52 shrink-0 bg-surface-container p-3 rounded-xl flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim bg-secondary-container/20 px-1.5 py-0.5 rounded">AI MEDIA</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-inline">27% OFF</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-semibold text-on-surface truncate">OpenArt AI 27% Off</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">Daily generative credits &amp; workflow presets</p>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between">
+<span class="font-code-inline text-code-inline text-tertiary font-bold">Active Today</span>
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Accordion Expand/Collapse Logic
+  function toggleCard(contentId, iconId) {
+    const el = document.getElementById(contentId);
+    const icon = document.getElementById(iconId);
+    if (!el || !icon) return;
+
+    if (el.classList.contains('hidden')) {
+      el.classList.remove('hidden');
+      icon.classList.remove('rotate-180');
+    } else {
+      el.classList.add('hidden');
+      icon.classList.add('rotate-180');
+    }
+  }
+
+  // Copy Code Button Feedback State
+  function copyCouponCode() {
+    const code = document.getElementById('coupon-val').innerText.trim();
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(code);
+    }
+    const label = document.getElementById('copy-label');
+    const icon = document.getElementById('copy-icon');
+    const btn = document.getElementById('copy-btn');
+    
+    if (label && icon && btn) {
+      label.innerText = 'Copied!';
+      icon.innerText = 'done_all';
+      btn.classList.remove('bg-primary', 'text-on-primary');
+      btn.classList.add('bg-tertiary', 'text-on-tertiary');
+      
+      setTimeout(() => {
+        label.innerText = 'Copy Code';
+        icon.innerText = 'content_copy';
+        btn.classList.remove('bg-tertiary', 'text-on-tertiary');
+        btn.classList.add('bg-primary', 'text-on-primary');
+      }, 2400);
+    }
+  }
+
+  // Dynamic Proof Ticker Cycler
+  const claims = [
+    { name: "Alex K.", time: "2m ago" },
+    { name: "Sarah D.", time: "5m ago" },
+    { name: "Julian V.", time: "8m ago" },
+    { name: "Elena R.", time: "11m ago" }
+  ];
+  let claimIdx = 0;
+  setInterval(() => {
+    claimIdx = (claimIdx + 1) % claims.length;
+    const ticker = document.getElementById('proof-text');
+    if (ticker) {
+      ticker.innerHTML = '<strong class="font-semibold text-primary">' + claims[claimIdx].name + '</strong> claimed coupon ' + claims[claimIdx].time;
+    }
+  }, 4500);
+
+  // Micro Countdown Pulse
+  let sec = 11;
+  setInterval(() => {
+    sec = sec > 0 ? sec - 1 : 59;
+    const secEl = document.getElementById('countdown-sec');
+    if (secEl) {
+      secEl.innerText = (sec < 10 ? '0' : '') + sec + 's';
+    }
+  }, 1000);
+</script></main></body></html>

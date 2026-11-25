@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface": "#121318", "inverse-on-surface": "#2f3036", "secondary-fixed-dim": "#c0c1ff", "surface-container-low": "#1a1b21", "secondary-container": "#3131c0", "on-primary-fixed-variant": "#004c69", "on-secondary-container": "#b0b2ff", "primary-fixed": "#c4e7ff", "inverse-surface": "#e3e1e9", "outline": "#87929a", "secondary-fixed": "#e1e0ff", "on-error": "#690005", "on-tertiary-fixed": "#2a1700", "on-primary": "#00354a", "outline-variant": "#3e484f", "background": "#121318", "primary": "#8ed5ff", "on-secondary": "#1000a9", "surface-tint": "#7bd0ff", "on-primary-container": "#004965", "on-surface": "#e3e1e9", "surface-container-lowest": "#0d0e13", "tertiary-fixed": "#ffddb8", "on-tertiary-fixed-variant": "#653e00", "inverse-primary": "#00668a", "error": "#ffb4ab", "surface-container-high": "#292a2f", "surface-container": "#1e1f25", "surface-bright": "#38393f", "on-tertiary-container": "#613b00", "tertiary-fixed-dim": "#ffb960", "on-secondary-fixed": "#07006c", "primary-fixed-dim": "#7bd0ff", "on-error-container": "#ffdad6", "on-primary-fixed": "#001e2c", "on-tertiary": "#472a00", "tertiary-container": "#f1a02b", "on-surface-variant": "#bdc8d1", "surface-container-highest": "#34343a", "tertiary": "#ffc176", "surface-dim": "#121318", "surface-variant": "#34343a", "on-secondary-fixed-variant": "#2f2ebe", "on-background": "#e3e1e9", "primary-container": "#38bdf8", "error-container": "#93000a", "secondary": "#c0c1ff" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-md": "0.75rem", "space-2xs": "0.125rem", "space-lg": "1.5rem", "gutter-sm": "0.75rem", "space-base": "1rem", "margin-tablet": "1.5rem", "space-xl": "2rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter": "1rem", "margin": "1rem", "space-2xl": "3rem" }, fontFamily: { "headline-xl-mobile": ["Geist"], "label-md": ["Geist"], "headline-lg": ["Geist"], "code-inline": ["JetBrains Mono"], "label-sm": ["Geist"], "headline-sm": ["Geist"], "body-lg": ["Inter"], "headline-xl": ["Geist"], "body-md": ["Inter"], "headline-md": ["Geist"], "body-sm": ["Inter"] }, fontSize: { "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "code-inline": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "headline-sm": ["16px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back_ios_new</span></button><img alt="Signal Tech Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBGjb_I1Oz5As4Zsxs7f1kl7bQufCuYAHYpw9wSOnrOk8QbaHFaXb2s6MXpztnchzsLUFnS41hzJEPamD7PBkci98PaeHGUz3DBjxCAi1ITwPrkhUnPXuRO7Qlazp-fWEO4hSONRR94OhyqCZadGJ0VF3VcL7o2GkcaSaBa9y3I8aCtolPaCdKYaafxC8GByTZlUOauLzViMgUd_sQnIf84T_MgUSKrkJwgMzSdSzML"/><h1 class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface truncate max-w-[170px]">Article Reader</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Bookmark" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">bookmark</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full px-margin pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full relative">
+<!-- Dynamic Persistent Progress Bar (Pinned beneath App Shell) -->
+<div class="fixed top-16 left-0 w-full h-[2px] bg-surface-container-highest z-40 overflow-hidden pointer-events-none">
+<div class="h-full bg-primary-container shadow-[0_0_8px_#38bdf8] transition-all duration-150 ease-out" id="readProgress" style="width: 42%;"></div>
+</div>
+<!-- Ambient Reader Glow -->
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 w-72 h-36 bg-primary-container/5 blur-3xl pointer-events-none rounded-full"></div>
+<!-- Editorial Metadata Header -->
+<header class="flex flex-col pt-space-md pb-space-base">
+<div class="flex flex-wrap items-center gap-space-sm mb-space-sm">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-container/10">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Silicon &amp; Architecture</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+        Oct 24, 2024 • 4 min read
+      </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/70 hidden sm:inline">• Source: Wired Wire</span>
+</div>
+<!-- Article Headline -->
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface tracking-tight leading-tight mb-space-base">
+      TSMC 2nm Process Nodes Enter High-Volume Pilot Yield Phase with Unprecedented Efficiency
+    </h1>
+<!-- Author Identity Row -->
+<div class="flex items-center justify-between gap-space-base pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-full overflow-hidden bg-surface-container-high flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close-up professional portrait of Dr. Elena Rostova, a female semiconductor physicist in modern minimalist dark clothing, neutral cool background studio lighting, photorealistic sharp high-tech portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ9Mi2E_M_e0NLNYX-gjb28GkGOtZbxYoj9H35m848Gna3Co8dCgJUsM1LxW5MDTR34T-m4-Zay3YEGO_VCYflc-GNMaCfSPg9evyuDtns-qSvjKgksqrJiHx2BwZnvIGtZOT18QIDjX_exeEf1t-0LVH-8TKan9QvtKpd7Se1ibbHxGhetutqFcXOc4CMs3jKeRCqrMj8PCix7VfSJr2zTHDzTEpv4-JIWwz2gkI"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium truncate">Dr. Elena Rostova</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Senior Semiconductor Analyst</span>
+</div>
+</div>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-bright transition-all text-xs font-label-md" id="followAuthorBtn">
+        Follow
+      </button>
+</div>
+<!-- Reader Tactical Utility Bar -->
+<div class="mt-space-sm p-space-xs rounded-xl bg-surface-container flex items-center justify-between gap-space-xs">
+<!-- Font Resizer Segment -->
+<div class="flex items-center bg-surface-container-low rounded-lg p-0.5">
+<button class="px-2.5 py-1 text-xs font-label-md rounded text-on-surface-variant hover:text-on-surface active:bg-surface-container-highest transition-colors" id="fontDecBtn" title="Standard text">A</button>
+<button class="px-2.5 py-1 text-sm font-label-md font-bold rounded bg-surface-container-high text-primary transition-colors" id="fontIncBtn" title="Enlarged text">A+</button>
+</div>
+<!-- Listen to Article Audio Pill -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors group" id="audioPlayBtn">
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:scale-110 transition-transform">play_circle</span>
+<span class="font-label-md text-label-md text-on-surface">Listen</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant">3:45</span>
+</button>
+<!-- Utility Action Icons -->
+<div class="flex items-center gap-1">
+<button aria-label="Save Article" class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors" id="saveArticleBtn">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+<button aria-label="Share Article" class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors" id="shareArticleBtn">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Editorial Hero Visual Placeholder -->
+<div class="w-full h-52 sm:h-64 rounded-xl overflow-hidden relative my-space-base bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Extreme macro microphotography of a next-generation silicon wafer circuit pattern, showing ultra-fine gate nanosheet lattice geometry under subtle electric cyan illumination and deep charcoal shadows, 8k crisp technological depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfoWbO4kmTKVxtVLMAE5MxAhU8-BG0sLQZ5N1FkYhriQsjomYUBhudfVmWOEedovRFYN95jxorSms0tY1mzS1hu-nwmfuIJ9LjRu0rYe0TfYtezfmJOp6k5Oi84kqlPjTqNACoAL6N1jeV62i_1Fj01FEqRTHiKUTJsg_ozM7s7jXwZhq0cU85uD23oKq3gGTZtsbyYRNO1eYHs5BU9hGxhTu0U58XK2llicDIGI0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-2 left-3 right-3 flex items-center justify-between text-[11px] font-code-inline text-on-surface-variant">
+<span>N2 Pilot Run: Hsinchu Fab 20</span>
+<span>TEM Micrograph 120,000x</span>
+</div>
+</div>
+<!-- Key Takeaways 'Executive Brief' -->
+<section class="my-space-base p-space-base rounded-xl bg-surface-container-low/90 backdrop-blur-md relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">bolt</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-wide">Executive Brief</h2>
+</div>
+<ul class="flex flex-col gap-space-xs">
+<li class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="text-primary mt-0.5">•</span>
+<span>TSMC has officially shifted its trial N2 GAA fabrication run to full pilot wafer volume across Baoshan Fab 20.</span>
+</li>
+<li class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="text-primary mt-0.5">•</span>
+<span>Trial yields surpassed preliminary roadmaps by 8.4%, solidifying target mass tape-outs for hyperscalers by early 2025.</span>
+</li>
+<li class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="text-primary mt-0.5">•</span>
+<span>Transition away from legacy FinFET architecture eliminates static quantum tunneling leakages at sub-3nm nodes.</span>
+</li>
+</ul>
+</section>
+<!-- Distraction-free Article Body Content -->
+<article class="flex flex-col gap-space-lg text-[#E2E8F0] font-body-lg text-body-lg leading-[1.75] max-w-[65ch]" id="articleContent">
+<p>
+      In what industry insiders are hailing as a decisive leap across the physical boundaries of lithography, Taiwan Semiconductor Manufacturing Company (TSMC) has quietly initiated accelerated pilot production of its 2nm (N2) gate-all-around (GAA) nanosheet nodes.
+    </p>
+<!-- Stat Mosaic / High-Tech Spec Summary Card -->
+<div class="grid grid-cols-3 gap-space-xs my-space-sm p-space-sm rounded-xl bg-surface-container">
+<div class="flex flex-col items-center justify-center p-space-sm rounded-lg bg-surface-container-low text-center">
+<span class="font-headline-md text-headline-md text-primary font-bold tracking-tight">+25%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Efficiency</span>
+</div>
+<div class="flex flex-col items-center justify-center p-space-sm rounded-lg bg-surface-container-low text-center">
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">1.15×</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Density</span>
+</div>
+<div class="flex flex-col items-center justify-center p-space-sm rounded-lg bg-surface-container-low text-center">
+<span class="font-headline-md text-headline-md text-tertiary font-bold tracking-tight">Q1 2025</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Mass Prod</span>
+</div>
+</div>
+<p>
+      The shift from traditional FinFET to nanosheet architecture addresses the long-standing parasitic capacitance dilemma that has hindered sub-3nm deployments. Rather than conducting along a three-sided vertical channel, the N2 gate completely envelops horizontal channel slices, granting gate control on all four vectors simultaneously.
+    </p>
+<!-- Sleek Cyan Accent Pull-Quote -->
+<div class="my-space-md py-space-sm pl-space-base relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 rounded-full bg-primary-container shadow-[0_0_12px_#38bdf8]"></div>
+<blockquote class="font-headline-md text-headline-md italic font-light text-on-surface leading-snug">
+        “The leap from FinFET to Gate-All-Around nanosheets delivers a 30% reduction in thermal dissipation at peak clock frequencies.”
+      </blockquote>
+<span class="block mt-space-xs font-label-md text-label-md text-primary tracking-wide uppercase">— TSMC Research Dispatch, Oct 2024</span>
+</div>
+<p>
+      For enterprise AI server matrices and edge-inference consumer silicon alike, the implications are immense. Thermal ceilings have become the primary bottleneck in data center density. By maintaining performance at drastically lower voltage swings, clusters equipped with next-gen N2 silicon can achieve parity workloads with a fraction of modern liquid chill requirements.
+    </p>
+<!-- Architectural Architecture Matrix Detail Container -->
+<div class="p-space-base rounded-xl bg-surface-container-low my-space-xs">
+<div class="flex items-center justify-between mb-space-sm pb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Node Physical Benchmark</span>
+<span class="font-code-inline text-code-inline text-primary">EUV 0.33 NA High-Mix</span>
+</div>
+<div class="space-y-2.5">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Gate Pitch</span>
+<span class="font-code-inline text-on-surface">45 nm (-12%)</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[88%]"></div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm pt-1">
+<span class="text-on-surface-variant">Metal Pitch Interconnect</span>
+<span class="font-code-inline text-on-surface">22 nm with Backside Power</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[94%]"></div>
+</div>
+</div>
+</div>
+<p>
+      Mass production remains slated for early 2025 at Fab 20 in Hsinchu Science Park, followed closely by expansion into Taichung. With high-NA lithography integration scheduled directly for N2P iterations, the pace of silicon miniaturization appears far from exhausted.
+    </p>
+</article>
+<!-- Article Footer & Interactive Engagement Dock -->
+<section class="mt-space-xl pt-space-base flex flex-col gap-space-base">
+<!-- Reaction & Discussion Bar -->
+<div class="flex items-center justify-between gap-space-sm p-space-sm rounded-xl bg-surface-container">
+<button class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-surface-container-high hover:bg-primary-container/20 hover:text-primary transition-all active:scale-95 group" id="upvoteBtn">
+<span class="material-symbols-outlined text-[20px] text-primary group-hover:-translate-y-0.5 transition-transform">arrow_upward</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Signal Upvote</span>
+<span class="font-code-inline text-code-inline text-primary" id="voteCount">842</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-all active:scale-95" id="commentBtn">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">chat_bubble</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Discussion</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant">124</span>
+</button>
+</div>
+<!-- Next Story Sequential Preview Card -->
+<div class="p-space-base rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer group mb-space-2xl">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Up Next in Signal</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-2">
+        Inside Cerebras' Giant Wafer-Scale Engine 3: 4 Trillion Transistors on a Single Slab
+      </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+        Hardware Deep Dive • 6 min read
+      </p>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    // Reading Progress Tracking
+    function updateProgress() {
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollHeight > 0) {
+        const scrolled = (window.scrollY / scrollHeight) * 100;
+        const bar = document.getElementById('readProgress');
+        if (bar) {
+          bar.style.width = Math.min(100, Math.max(0, scrolled)) + '%';
+        }
+      }
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+
+    // Font Sizing Toggle
+    let isEnlarged = false;
+    const bodyContent = document.getElementById('articleContent');
+    const decBtn = document.getElementById('fontDecBtn');
+    const incBtn = document.getElementById('fontIncBtn');
+
+    if (decBtn && incBtn && bodyContent) {
+      decBtn.addEventListener('click', function() {
+        if (isEnlarged) {
+          bodyContent.classList.remove('text-[20px]', 'leading-[1.85]');
+          bodyContent.classList.add('text-body-lg', 'leading-[1.75]');
+          decBtn.classList.add('bg-surface-container-high', 'text-primary', 'font-bold');
+          decBtn.classList.remove('text-on-surface-variant');
+          incBtn.classList.remove('bg-surface-container-high', 'text-primary', 'font-bold');
+          incBtn.classList.add('text-on-surface-variant');
+          isEnlarged = false;
+        }
+      });
+
+      incBtn.addEventListener('click', function() {
+        if (!isEnlarged) {
+          bodyContent.classList.remove('text-body-lg', 'leading-[1.75]');
+          bodyContent.classList.add('text-[20px]', 'leading-[1.85]');
+          incBtn.classList.add('bg-surface-container-high', 'text-primary', 'font-bold');
+          incBtn.classList.remove('text-on-surface-variant');
+          decBtn.classList.remove('bg-surface-container-high', 'text-primary', 'font-bold');
+          decBtn.classList.add('text-on-surface-variant');
+          isEnlarged = true;
+        }
+      });
+    }
+
+    // Audio Playback Indicator Mock
+    const audioBtn = document.getElementById('audioPlayBtn');
+    let isPlaying = false;
+    if (audioBtn) {
+      audioBtn.addEventListener('click', function() {
+        isPlaying = !isPlaying;
+        const icon = audioBtn.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.textContent = isPlaying ? 'pause_circle' : 'play_circle';
+          icon.classList.toggle('text-tertiary', isPlaying);
+          icon.classList.toggle('text-primary', !isPlaying);
+        }
+      });
+    }
+
+    // Upvote Counter Micro-interaction
+    const upvoteBtn = document.getElementById('upvoteBtn');
+    const voteCount = document.getElementById('voteCount');
+    let voted = false;
+    if (upvoteBtn && voteCount) {
+      upvoteBtn.addEventListener('click', function() {
+        voted = !voted;
+        let count = parseInt(voteCount.textContent, 10);
+        voteCount.textContent = voted ? count + 1 : count - 1;
+        upvoteBtn.classList.toggle('bg-primary-container/20', voted);
+        const icon = upvoteBtn.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.style.fontVariationSettings = voted ? "'FILL' 1" : "'FILL' 0";
+        }
+      });
+    }
+
+    // Follow Toggle
+    const followBtn = document.getElementById('followAuthorBtn');
+    if (followBtn) {
+      followBtn.addEventListener('click', function() {
+        const isFollowing = followBtn.textContent.trim() === 'Following';
+        followBtn.textContent = isFollowing ? 'Follow' : 'Following';
+        followBtn.classList.toggle('bg-primary', !isFollowing);
+        followBtn.classList.toggle('text-on-primary', !isFollowing);
+        followBtn.classList.toggle('bg-surface-container-high', isFollowing);
+        followBtn.classList.toggle('text-on-surface', isFollowing);
+      });
+    }
+
+    // Bookmark Toggle
+    const saveBtn = document.getElementById('saveArticleBtn');
+    if (saveBtn) {
+      saveBtn.addEventListener('click', function() {
+        const icon = saveBtn.querySelector('.material-symbols-outlined');
+        const filled = icon.style.fontVariationSettings?.includes("'FILL' 1");
+        icon.style.fontVariationSettings = filled ? "'FILL' 0" : "'FILL' 1";
+        icon.classList.toggle('text-primary', !filled);
+      });
+    }
+  })();
+</script></main></body></html>

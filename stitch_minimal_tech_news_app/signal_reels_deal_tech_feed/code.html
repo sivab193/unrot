@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Loop // Signal Snaps</title><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed-variant":"#653e00","on-secondary":"#1000a9","outline-variant":"#3e484f","surface":"#121318","inverse-primary":"#00668a","surface-container-low":"#1a1b21","on-secondary-fixed":"#07006c","on-tertiary-fixed":"#2a1700","surface-bright":"#38393f","error":"#ffb4ab","secondary-container":"#3131c0","on-primary-fixed-variant":"#004c69","inverse-on-surface":"#2f3036","secondary-fixed-dim":"#c0c1ff","surface-dim":"#121318","on-surface":"#e3e1e9","surface-variant":"#34343a","surface-container-high":"#292a2f","primary-fixed-dim":"#7bd0ff","on-primary":"#00354a","on-error":"#690005","background":"#121318","surface-tint":"#7bd0ff","surface-container-highest":"#34343a","on-tertiary":"#472a00","on-secondary-container":"#b0b2ff","outline":"#87929a","primary":"#8ed5ff","error-container":"#93000a","tertiary":"#ffc176","on-primary-fixed":"#001e2c","on-background":"#e3e1e9","secondary":"#c0c1ff","on-tertiary-container":"#613b00","on-primary-container":"#004965","tertiary-fixed":"#ffddb8","inverse-surface":"#e3e1e9","surface-container-lowest":"#0d0e13","on-error-container":"#ffdad6","primary-container":"#38bdf8","on-surface-variant":"#bdc8d1","primary-fixed":"#c4e7ff","surface-container":"#1e1f25","on-secondary-fixed-variant":"#2f2ebe","secondary-fixed":"#e1e0ff","tertiary-fixed-dim":"#ffb960","tertiary-container":"#f1a02b"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-xs":"0.25rem","space-2xs":"0.125rem","space-base":"1rem","space-sm":"0.5rem","space-lg":"1.5rem",gutter:"1rem","space-2xl":"3rem","space-xl":"2rem","margin-tablet":"1.5rem","gutter-sm":"0.75rem",margin:"1rem","space-md":"0.75rem"},fontFamily:{"body-md":["Inter"],"headline-lg":["Geist"],"code-inline":["JetBrains Mono"],"label-sm":["Geist"],"body-sm":["Inter"],"label-md":["Geist"],"body-lg":["Inter"],"headline-sm":["Geist"],"headline-md":["Geist"],"headline-xl-mobile":["Geist"],"headline-xl":["Geist"]},fontSize:{"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg":["24px",{lineHeight:"30px",letterSpacing:"-0.02em",fontWeight:"600"}],"code-inline":["13px",{lineHeight:"18px",fontWeight:"500"}],"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.06em",fontWeight:"700"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.005em",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"22px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"26px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-xl-mobile":["28px",{lineHeight:"34px",letterSpacing:"-0.025em",fontWeight:"700"}],"headline-xl":["36px",{lineHeight:"44px",letterSpacing:"-0.03em",fontWeight:"700"}]}}};</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#121318;color:#e3e1e9;-webkit-tap-highlight-color:transparent;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 pt-safe pointer-events-none"><div class="h-16 px-margin flex items-center justify-between pointer-events-auto bg-surface-container-lowest/40 backdrop-blur-xl"><div class="flex items-center gap-space-xs"><button aria-label="Search Snaps" class="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><div class="flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full bg-surface-container/60"><span class="material-symbols-outlined text-[18px] text-tertiary">local_fire_department</span><span class="font-label-sm text-label-sm text-tertiary">12d</span></div></div><div class="flex items-center gap-space-md"><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">Signal Feed</span></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full relative">
+<!-- Interactive Toast Notification Overlay for Instant Copy Delight -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-all duration-300 scale-95 flex items-center gap-space-xs px-space-base py-space-xs rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm shadow-xl shadow-primary-container/20" id="toast-pill">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-code-inline text-code-inline tracking-wider uppercase font-semibold" id="toast-text">Code Copied!</span>
+</div>
+<!-- Reels Vertical Snap Scroll Container -->
+<div class="w-full h-[calc(100dvh-8rem)] overflow-y-scroll snap-y snap-mandatory relative scrollbar-none" id="snap-feed-viewport" style="-webkit-overflow-scrolling: touch;">
+<!-- ================= SNAP REEL 1 : BLUEHOST AI BUILDER ================= -->
+<section class="w-full h-full snap-start snap-always relative flex flex-col justify-between overflow-hidden bg-surface select-none p-space-base">
+<!-- Background Dynamic Visual Art Layer with Tech Visual Aesthetic -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-35 scale-105" data-alt="High tech deep blue cyberpunk server rack ambient neon lighting subtle glowing grid fiber optics obsidian glass UI backdrop futuristic developer terminal render" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfM-IVU4291uG7DPFFJf9rgn4B2vk1kg1CCGganyR9BDH821B1sldRfpsjAf_J1oWi7CXbC8QHwitzpa-ghaBf-m3iHXdsZU1vhBrGpdlWs2zsSC9kq2cOH9eHobWyhABbkZHOrqZlpb2_k5x7sSBe1rq3awrszttaZ7wK13TWGmF2koybfF453SzKXZpR77dTWO1NeWGMU8owBqejl3RJDxDk9K1AGj48nPFOoTk"/>
+<!-- Top and bottom gradient scrims for surgical contrast -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface/60 to-surface-container-lowest/80"></div>
+<!-- Decorative Ambient Laser Beam (SVG) -->
+<svg class="absolute top-10 right-0 w-80 h-80 opacity-20 pointer-events-none" fill="none" viewbox="0 0 200 200">
+<circle class="animate-spin" cx="100" cy="100" r="80" stroke="url(#paint0_radial_1)" stroke-dasharray="6 4" stroke-width="1.5" style="animation-duration: 40s;"></circle>
+<defs>
+<radialgradient cx="0" cy="0" gradienttransform="translate(100 100) rotate(90) scale(80)" gradientunits="userSpaceOnUse" id="paint0_radial_1" r="1">
+<stop stop-color="#38bdf8"></stop>
+<stop offset="1" stop-color="#38bdf8" stop-opacity="0"></stop>
+</radialgradient>
+</defs>
+</svg>
+</div>
+<!-- Top Overlay: Live Indicators -->
+<div class="relative z-10 w-full flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-space-2xs rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm tracking-widest uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+            🔥 100% OFF Spotlight
+          </span>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container-high/80 text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary">timer</span>
+            Expires in 18h
+          </span>
+</div>
+<div class="flex items-center gap-space-2xs bg-surface-container-lowest/70 backdrop-blur-md px-space-xs py-space-2xs rounded-full">
+<span class="material-symbols-outlined text-primary text-[15px]">electric_bolt</span>
+<span class="font-code-inline text-code-inline text-primary-fixed">#Freebie</span>
+</div>
+</div>
+<!-- Right-Side Tactical Interaction Stack (TikTok/Reels Ergonomics) -->
+<div class="absolute right-space-base bottom-28 z-20 flex flex-col items-center gap-space-md">
+<!-- Creator Avatar with Add Badge -->
+<div class="relative flex flex-col items-center mb-space-2xs">
+<div class="w-11 h-11 rounded-full bg-surface-container-high p-0.5 shadow-lg shadow-black/40">
+<div class="w-full h-full rounded-full bg-primary flex items-center justify-center font-headline-sm text-headline-sm text-on-primary font-bold">
+              R
+            </div>
+</div>
+<button class="absolute -bottom-1.5 w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center hover:scale-110 active:scale-95 transition-transform shadow-md">
+<span class="material-symbols-outlined text-[13px] font-bold">add</span>
+</button>
+</div>
+<!-- Upvote Action -->
+<button class="group flex flex-col items-center gap-0.5 text-on-surface" onclick="toggleHeart(this)">
+<div class="w-11 h-11 rounded-full bg-surface-container-lowest/60 backdrop-blur-md flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[26px] text-on-surface group-hover:text-error transition-colors heart-icon">favorite</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant count-label">14.8k</span>
+</button>
+<!-- Comments Action -->
+<button class="group flex flex-col items-center gap-0.5 text-on-surface">
+<div class="w-11 h-11 rounded-full bg-surface-container-lowest/60 backdrop-blur-md flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[25px] text-on-surface">chat_bubble</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">382</span>
+</button>
+<!-- Bookmark / Claim Store -->
+<button class="group flex flex-col items-center gap-0.5 text-on-surface" onclick="toggleBookmark(this)">
+<div class="w-11 h-11 rounded-full bg-surface-container-lowest/60 backdrop-blur-md flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[25px] text-on-surface bookmark-icon">bookmark</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bookmark-label">2.1k</span>
+</button>
+<!-- Share Action -->
+<button class="group flex flex-col items-center gap-0.5 text-on-surface" onclick="copyShareLink('https://resourify.com/resources/bluehost-ai-builder')">
+<div class="w-11 h-11 rounded-full bg-surface-container-lowest/60 backdrop-blur-md flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[25px] text-on-surface">send</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Share</span>
+</button>
+<!-- Spinning Neon Discount Vinyl Badge -->
+<div class="relative w-10 h-10 mt-space-2xs flex items-center justify-center rounded-full bg-surface-container-lowest/80 backdrop-blur-md animate-spin" style="animation-duration: 8s;">
+<div class="w-7 h-7 rounded-full bg-tertiary-container flex items-center justify-center shadow-sm">
+<span class="font-label-sm text-[8px] font-bold text-on-tertiary-container tracking-tighter">100%</span>
+</div>
+</div>
+</div>
+<!-- Bottom Card Content Area Clamped for Ergonomics -->
+<div class="relative z-10 w-full max-w-[82%] flex flex-col gap-space-sm pb-space-xs">
+<!-- Creator Handle & Channel -->
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface flex items-center gap-1">
+            Resourify Official
+            <span class="material-symbols-outlined text-[15px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• 15h ago</span>
+</div>
+<!-- Punchy Dopamine Headline -->
+<h2 class="font-headline-xl-mobile text-headline-xl-mobile font-bold tracking-tight text-on-surface leading-tight">
+          Get $80 AI Builder For $0 • Free 1st Month
+        </h2>
+<!-- Quick 3-Bullet Breakdown Designed for 5-Second Scan -->
+<div class="flex flex-col gap-1.5 py-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary">bolt</span>
+</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">100% off any plan worth $80 with code</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-secondary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-secondary">domain</span>
+</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Includes full cloud hosting + automated WordPress AI</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-tertiary-container/30 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-tertiary">trending_up</span>
+</span>
+<p class="font-body-sm text-body-sm text-tertiary-fixed font-semibold">1,240 builders claimed in last 3 hours</p>
+</div>
+</div>
+<!-- Interactive Tap To Copy Code Pill -->
+<div class="flex items-center gap-space-xs pt-space-2xs">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-high/90 hover:bg-surface-bright active:scale-95 transition-all text-primary font-code-inline text-code-inline shadow-md" onclick="copyPromo('FREEMONTH', this)">
+<span class="font-bold tracking-widest text-primary">FREEMONTH</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">content_copy</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tap to copy</span>
+</button>
+</div>
+<!-- Audio Pulse Pill -->
+<div class="flex items-center gap-space-2xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary animate-pulse">graphic_eq</span>
+<span class="font-label-md text-label-md truncate max-w-[200px]">Tech Pulse Beat • Resourify Audio Original</span>
+</div>
+<!-- Floating Prominent CTA Bar -->
+<div class="w-full pt-space-xs flex items-center gap-space-xs">
+<a class="flex-1 py-3 px-space-base rounded-xl bg-primary-container text-on-primary font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-space-xs shadow-lg shadow-primary-container/20 active:scale-95 transition-transform" href="https://bluehost.sjv.io/Gb9W56" rel="noopener noreferrer" target="_blank">
+<span>Claim Deal (100% Off)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Bottom Micro-Indicator: Swipe Up Cue -->
+<div class="relative z-10 w-full flex items-center justify-center pt-space-2xs pb-1 pointer-events-none opacity-60">
+<div class="flex flex-col items-center">
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant">Swipe up</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface animate-bounce -mt-1">keyboard_arrow_down</span>
+</div>
+</div>
+</section>
+<!-- ================= SNAP REEL 2 : CLAUDE & OPENAI GRANTS ================= -->
+<section class="w-full h-full snap-start snap-always relative flex flex-col justify-between overflow-hidden bg-surface select-none p-space-base">
+<!-- Background Visual Layer -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30 scale-105" data-alt="Neural network nodes glowing violet and electric cyan floating in pitch black universe abstract artificial intelligence startup compute data" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMIj8a9RwoCy2DHYd4x9jum-uVzaZcZi0mRJ79UlfOaOIWk3qdteODTEVIOeSkphPZ8dYwGYrRLJk_GTK4FYtfPpkllf7aHWDNqw3A9Fu8dMaWWLh1qKhAi5iBMYLYrpyKYuFgAUscs9EkX7lqT8LOeGlPJca4WEISksNwxoF1jfUd6xH09UpV32IWyoAcnNf2RHmUHJ2OBP4QK22deu5megLnHrhSkotLwYetXZA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface/65 to-surface-container-lowest/80"></div>
+<!-- Decorative Code Overlay Sparkline -->
+<div class="absolute top-12 left-4 w-60 h-28 opacity-25 font-code-inline text-[10px] text-secondary leading-tight pointer-events-none">
+<code>
+            &gt; anthropic.grants.apply()<br/>
+            &gt; max_compute: $250,000<br/>
+            &gt; codex_open_source: 6mo_free<br/>
+            &gt; status: 200 VERIFIED_TODAY
+          </code>
+</div>
+</div>
+<!-- Top Overlay -->
+<div class="relative z-10 w-full flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-space-2xs rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm tracking-widest uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+            ⚡ Dev Breakthrough
+          </span>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container-high/80 text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">verified</span>
+            Verified 2h ago
+          </span>
+</div>
+<div class="flex items-center gap-space-2xs bg-surface-container-lowest/70 backdrop-blur-md px-space-xs py-space-2xs rounded-full">
+<span class="material-symbols-outlined text-secondary text-[15px]">code_blocks</span>
+<span class="font-code-inline text-code-inline text-secondary-fixed">$250k Pool</span>
+</div>
+</div>
+<!-- Right-Side Vertical Stack -->
+<div class="absolute right-space-base bottom-28 z-20 flex flex-col items-center gap-space-md">
+<div class="relative flex flex-col items-center mb-space-2xs">
+<div class="w-11 h-11 rounded-full bg-surface-container-high p-0.5 shadow-lg shadow-black/40">
+<div class="w-full h-full rounded-full bg-secondary-container flex items-center justify-center font-headline-sm text-headline-sm text-on-secondary-container font-bold">
+              AI
+            </div>
+</div>
+<button class="absolute -bottom-1.5 w-5 h-5 rounded-full bg-secondary text-on-secondary flex items-center justify-center hover:scale-110 active:scale-95 transition-transform shadow-md">
+<span class="material-symbols-outlined text-[13px] font-bold">add</span>
+</button>
+</div>
+<button class="group flex flex-col items-center gap-0.5 text-on-surface" onclick="toggleHeart(this)">
+<div class="w-11 h-11 rounded-full bg-surface-container-lowest/60 backdrop-blur-md flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[26px] text-on-surface group-hover:text-error transition-colors heart-icon">favorite</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant count-label">52.7k</span>
+</button>
+<button class="group flex flex-col items-center gap-0.5 text-on-surface">
+<div class="w-11 h-11 rounded-full bg-surface-container-lowest/60 backdrop-blur-md flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[25px] text-on-surface">chat_bubble</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1,409</span>
+</button>
+<button class="group flex flex-col items-center gap-0.5 text-on-surface" onclick="toggleBookmark(this)">
+<div class="w-11 h-11 rounded-full bg-surface-container-lowest/60 backdrop-blur-md flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[25px] text-on-surface bookmark-icon">bookmark</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bookmark-label">8.4k</span>
+</button>
+<button class="group flex flex-col items-center gap-0.5 text-on-surface" onclick="copyShareLink('https://resourify.com/resources/claude-free-credits')">
+<div class="w-11 h-11 rounded-full bg-surface-container-lowest/60 backdrop-blur-md flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[25px] text-on-surface">send</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Share</span>
+</button>
+<div class="relative w-10 h-10 mt-space-2xs flex items-center justify-center rounded-full bg-surface-container-lowest/80 backdrop-blur-md animate-spin" style="animation-duration: 9s;">
+<div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center shadow-sm">
+<span class="font-label-sm text-[8px] font-bold text-on-secondary-container tracking-tighter">FREE</span>
+</div>
+</div>
+</div>
+<!-- Bottom Card Information -->
+<div class="relative z-10 w-full max-w-[82%] flex flex-col gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface flex items-center gap-1">
+            Claude x OpenAI Grants
+            <span class="material-symbols-outlined text-[15px] text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• Trending</span>
+</div>
+<h2 class="font-headline-xl-mobile text-headline-xl-mobile font-bold tracking-tight text-on-surface leading-tight">
+          Up to $250k Dev Grants + 6 Months Free ChatGPT Pro
+        </h2>
+<!-- Dopamine Hit Bullet Points -->
+<div class="flex flex-col gap-1.5 py-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-secondary/15 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-secondary">psychology</span>
+</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">Anthropic API Grants: $50k Science + $50k Security</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary">terminal</span>
+</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Codex for Open Source: 6 Months 100% Pro free</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-on-surface">no_accounts</span>
+</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">Zero credit card required for open-source maintainers</p>
+</div>
+</div>
+<!-- Copy Quick Action -->
+<div class="flex items-center gap-space-xs pt-space-2xs">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-high/90 hover:bg-surface-bright active:scale-95 transition-all text-secondary font-code-inline text-code-inline shadow-md" onclick="copyPromo('OPENSOURCEPRO', this)">
+<span class="font-bold tracking-widest text-secondary">OPENSOURCEPRO</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">content_copy</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Copy Access Key</span>
+</button>
+</div>
+<!-- Audio Pill -->
+<div class="flex items-center gap-space-2xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary animate-pulse">equalizer</span>
+<span class="font-label-md text-label-md truncate max-w-[200px]">Silicon Valley Dispatch • Episode 44</span>
+</div>
+<!-- CTA Action -->
+<div class="w-full pt-space-xs flex items-center gap-space-xs">
+<a class="flex-1 py-3 px-space-base rounded-xl bg-secondary text-on-secondary font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-space-xs shadow-lg active:scale-95 transition-transform" href="https://resourify.com/resources/claude-free-credits">
+<span>Apply for Dev Grant ($250k)</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+</div>
+<div class="relative z-10 w-full flex items-center justify-center pt-space-2xs pb-1 pointer-events-none opacity-60">
+<div class="flex flex-col items-center">
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant">Next innovation</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface animate-bounce -mt-1">keyboard_arrow_down</span>
+</div>
+</div>
+</section>
+<!-- ================= SNAP REEL 3 : SYNTHESIA & KLING AI ================= -->
+<section class="w-full h-full snap-start snap-always relative flex flex-col justify-between overflow-hidden bg-surface select-none p-space-base">
+<!-- Background Visual Layer -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-35 scale-105" data-alt="Hyperrealistic synthetic human avatar digital twin with neon wireframe HUD overlay glowing warm amber and obsidian studio lighting cinematic 8k render" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPCSlx90iudgrIcBXTRUtSfhuqFqjXvskiMzqxWYnDg3y_SV6uHXPEzACzAyJ0gt0_y-Rt-cwDzd5rDFqESartnjFI6U9RXP_KAOL5ZoEvcHdxhvT-yKFM0TkvUfb83pUu6qFHl9E0C4h_k5Es--ZSMPjcszjqwT8GCfziTV-hxcMJ_ZDpdz6pdQVfYlaXr-jP_XW7EcNyV8MsHgXG0PaYEgH94pbhqN3mTdCcLQQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface/60 to-surface-container-lowest/80"></div>
+</div>
+<!-- Top Overlay -->
+<div class="relative z-10 w-full flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-space-2xs rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm tracking-widest uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+            🔥 Video Gen 2.0
+          </span>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container-high/80 text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary">alarm</span>
+            Ends in 8d 21h
+          </span>
+</div>
+<div class="flex items-center gap-space-2xs bg-surface-container-lowest/70 backdrop-blur-md px-space-xs py-space-2xs rounded-full">
+<span class="material-symbols-outlined text-tertiary text-[15px]">movie_filter</span>
+<span class="font-code-inline text-code-inline text-tertiary-fixed">50% Off</span>
+</div>
+</div>
+<!-- Right Action Stack -->
+<div class="absolute right-space-base bottom-28 z-20 flex flex-col items-center gap-space-md">
+<div class="relative flex flex-col items-center mb-space-2xs">
+<div class="w-11 h-11 rounded-full bg-surface-container-high p-0.5 shadow-lg shadow-black/40">
+<div class="w-full h-full rounded-full bg-tertiary-container flex items-center justify-center font-headline-sm text-headline-sm text-on-tertiary-container font-bold">
+              K
+            </div>
+</div>
+<button class="absolute -bottom-1.5 w-5 h-5 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center hover:scale-110 active:scale-95 transition-transform shadow-md">
+<span class="material-symbols-outlined text-[13px] font-bold">add</span>
+</button>
+</div>
+<button class="group flex flex-col items-center gap-0.5 text-on-surface" onclick="toggleHeart(this)">
+<div class="w-11 h-11 rounded-full bg-surface-container-lowest/60 backdrop-blur-md flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[26px] text-on-surface group-hover:text-error transition-colors heart-icon">favorite</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant count-label">29.4k</span>
+</button>
+<button class="group flex flex-col items-center gap-0.5 text-on-surface">
+<div class="w-11 h-11 rounded-full bg-surface-container-lowest/60 backdrop-blur-md flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[25px] text-on-surface">chat_bubble</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">518</span>
+</button>
+<button class="group flex flex-col items-center gap-0.5 text-on-surface" onclick="toggleBookmark(this)">
+<div class="w-11 h-11 rounded-full bg-surface-container-lowest/60 backdrop-blur-md flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[25px] text-on-surface bookmark-icon">bookmark</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bookmark-label">4.3k</span>
+</button>
+<button class="group flex flex-col items-center gap-0.5 text-on-surface" onclick="copyShareLink('https://resourify.com/resources/kling-ai')">
+<div class="w-11 h-11 rounded-full bg-surface-container-lowest/60 backdrop-blur-md flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[25px] text-on-surface">send</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Share</span>
+</button>
+<div class="relative w-10 h-10 mt-space-2xs flex items-center justify-center rounded-full bg-surface-container-lowest/80 backdrop-blur-md animate-spin" style="animation-duration: 7s;">
+<div class="w-7 h-7 rounded-full bg-tertiary flex items-center justify-center shadow-sm">
+<span class="font-label-sm text-[8px] font-bold text-on-tertiary tracking-tighter">50%</span>
+</div>
+</div>
+</div>
+<!-- Bottom Card Information -->
+<div class="relative z-10 w-full max-w-[82%] flex flex-col gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface flex items-center gap-1">
+            Kling AI &amp; Generative Lab
+            <span class="material-symbols-outlined text-[15px] text-tertiary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• Nov 20 drop</span>
+</div>
+<h2 class="font-headline-xl-mobile text-headline-xl-mobile font-bold tracking-tight text-on-surface leading-tight">
+          Realtime Lip-Sync 2.0 &amp; 50% Off Black Friday Credits
+        </h2>
+<!-- Dopamine Hit Scan Bullets -->
+<div class="flex flex-col gap-1.5 py-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-tertiary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-tertiary">videocam</span>
+</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">Up to 50% off subscription + 20% bonus generation credits</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary">record_voice_over</span>
+</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Instant video creation with zero GPU setup</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary">groups</span>
+</span>
+<p class="font-body-sm text-body-sm text-primary-fixed font-semibold">269 devs active this hour</p>
+</div>
+</div>
+<!-- Copy Promo Action -->
+<div class="flex items-center gap-space-xs pt-space-2xs">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-high/90 hover:bg-surface-bright active:scale-95 transition-all text-tertiary font-code-inline text-code-inline shadow-md" onclick="copyPromo('KLINGBF50', this)">
+<span class="font-bold tracking-widest text-tertiary">KLINGBF50</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">content_copy</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tap to copy</span>
+</button>
+</div>
+<!-- Audio Pill -->
+<div class="flex items-center gap-space-2xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary animate-pulse">music_note</span>
+<span class="font-label-md text-label-md truncate max-w-[200px]">Hyper-Synth Motion • Tech Sound</span>
+</div>
+<!-- CTA Button -->
+<div class="w-full pt-space-xs flex items-center gap-space-xs">
+<a class="flex-1 py-3 px-space-base rounded-xl bg-tertiary text-on-tertiary font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-space-xs shadow-lg active:scale-95 transition-transform" href="https://resourify.com/resources/kling-ai">
+<span>Unlock 50% AI Video Credits</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="relative z-10 w-full flex items-center justify-center pt-space-2xs pb-1 pointer-events-none opacity-60">
+<div class="flex flex-col items-center">
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant">Next deal</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface animate-bounce -mt-1">keyboard_arrow_down</span>
+</div>
+</div>
+</section>
+<!-- ================= SNAP REEL 4 : MESHY AI 3D ENGINE ================= -->
+<section class="w-full h-full snap-start snap-always relative flex flex-col justify-between overflow-hidden bg-surface select-none p-space-base">
+<!-- Background Visual Layer -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-35 scale-105" data-alt="Futuristic cybernetic 3D mesh polygonal wireframe model evolving in dark spatial studio with teal cyan volumetric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALuM0mfYZyYwrs9RCvTFwXPNLwh6ECdCN3ylbXc7kJ6wcc109eNDRquhVwRu-rpvsQcJrIsSbOG6VgHpW8Fer3vY4dDjQ0U1UMmbgSYbVo0i0i1jG2SmwMfDBMO4LQ7toS0OU7KyMJpcW7DCycaun6RHbfo9t0QuvT9zj1MOEnBYoiroEKZ5HUTfSgIMP8RYbKuviTISssoPdKwS32lICBE0LRsxwpg3jDTQl_-8Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface/65 to-surface-container-lowest/80"></div>
+</div>
+<!-- Top Overlay -->
+<div class="relative z-10 w-full flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-space-2xs rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm tracking-widest uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+            🧊 3D AI Engine
+          </span>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container-high/80 text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">verified_user</span>
+            Verified 18h ago
+          </span>
+</div>
+<div class="flex items-center gap-space-2xs bg-surface-container-lowest/70 backdrop-blur-md px-space-xs py-space-2xs rounded-full">
+<span class="material-symbols-outlined text-primary text-[15px]">view_in_ar</span>
+<span class="font-code-inline text-code-inline text-primary">70% OFF</span>
+</div>
+</div>
+<!-- Right Action Stack -->
+<div class="absolute right-space-base bottom-28 z-20 flex flex-col items-center gap-space-md">
+<div class="relative flex flex-col items-center mb-space-2xs">
+<div class="w-11 h-11 rounded-full bg-surface-container-high p-0.5 shadow-lg shadow-black/40">
+<div class="w-full h-full rounded-full bg-primary-container flex items-center justify-center font-headline-sm text-headline-sm text-on-primary font-bold">
+              M
+            </div>
+</div>
+<button class="absolute -bottom-1.5 w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center hover:scale-110 active:scale-95 transition-transform shadow-md">
+<span class="material-symbols-outlined text-[13px] font-bold">add</span>
+</button>
+</div>
+<button class="group flex flex-col items-center gap-0.5 text-on-surface" onclick="toggleHeart(this)">
+<div class="w-11 h-11 rounded-full bg-surface-container-lowest/60 backdrop-blur-md flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[26px] text-on-surface group-hover:text-error transition-colors heart-icon">favorite</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant count-label">19.2k</span>
+</button>
+<button class="group flex flex-col items-center gap-0.5 text-on-surface">
+<div class="w-11 h-11 rounded-full bg-surface-container-lowest/60 backdrop-blur-md flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[25px] text-on-surface">chat_bubble</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">249</span>
+</button>
+<button class="group flex flex-col items-center gap-0.5 text-on-surface" onclick="toggleBookmark(this)">
+<div class="w-11 h-11 rounded-full bg-surface-container-lowest/60 backdrop-blur-md flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[25px] text-on-surface bookmark-icon">bookmark</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bookmark-label">3.8k</span>
+</button>
+<button class="group flex flex-col items-center gap-0.5 text-on-surface" onclick="copyShareLink('https://resourify.com/resources/meshy-ai')">
+<div class="w-11 h-11 rounded-full bg-surface-container-lowest/60 backdrop-blur-md flex items-center justify-center group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[25px] text-on-surface">send</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Share</span>
+</button>
+<div class="relative w-10 h-10 mt-space-2xs flex items-center justify-center rounded-full bg-surface-container-lowest/80 backdrop-blur-md animate-spin" style="animation-duration: 8s;">
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center shadow-sm">
+<span class="font-label-sm text-[8px] font-bold text-on-primary tracking-tighter">70%</span>
+</div>
+</div>
+</div>
+<!-- Bottom Card Information -->
+<div class="relative z-10 w-full max-w-[82%] flex flex-col gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface flex items-center gap-1">
+            Meshy 3D Engine
+            <span class="material-symbols-outlined text-[15px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• 1.8k clicks</span>
+</div>
+<h2 class="font-headline-xl-mobile text-headline-xl-mobile font-bold tracking-tight text-on-surface leading-tight">
+          70% Off Generative 3D Mesh Engine
+        </h2>
+<!-- Dopamine Bullets -->
+<div class="flex flex-col gap-1.5 py-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary">view_in_ar</span>
+</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">Text-to-3D and Image-to-3D with full UV unwrapping</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">download</span>
+</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct export to GLTF, USDZ, FBX and OBJ for game devs</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary">verified</span>
+</span>
+<p class="font-body-sm text-body-sm text-primary font-semibold">Valid Nov 20 – Dec 12, 2026</p>
+</div>
+</div>
+<!-- Interactive Tap-to-Copy Pill -->
+<div class="flex items-center gap-space-xs pt-space-2xs">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-high/90 hover:bg-surface-bright active:scale-95 transition-all text-primary font-code-inline text-code-inline shadow-md" onclick="copyPromo('RESOURIFYBF70', this)">
+<span class="font-bold tracking-widest text-primary">RESOURIFYBF70</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">content_copy</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tap to copy</span>
+</button>
+</div>
+<!-- Audio Pill -->
+<div class="flex items-center gap-space-2xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary animate-pulse">graphic_eq</span>
+<span class="font-label-md text-label-md truncate max-w-[200px]">3D Space Soundscape • Ambient Pulse</span>
+</div>
+<!-- CTA Action -->
+<div class="w-full pt-space-xs flex items-center gap-space-xs">
+<a class="flex-1 py-3 px-space-base rounded-xl bg-primary-container text-on-primary font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-space-xs shadow-lg active:scale-95 transition-transform" href="https://resourify.com/resources/meshy-ai">
+<span>Claim 70% Discount →</span>
+</a>
+</div>
+</div>
+<!-- Loop Back Top Cue -->
+<div class="relative z-10 w-full flex items-center justify-center pt-space-2xs pb-1 opacity-60">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" onclick="scrollToTop()">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Back to top</span>
+</button>
+</div>
+</section>
+</div>
+</div>
+<script>
+  // Micro-interaction: Interactive Copy Feedback Toast
+  function copyPromo(code, btn) {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(code);
+    }
+    const toast = document.getElementById('toast-pill');
+    const toastText = document.getElementById('toast-text');
+    toastText.innerText = 'Copied: ' + code;
+    
+    // Animate Toast
+    toast.classList.remove('opacity-0', 'scale-95');
+    toast.classList.add('opacity-100', 'scale-100');
+    
+    // Quick haptic-like button bounce
+    btn.classList.add('ring-2', 'ring-primary');
+    setTimeout(() => {
+      btn.classList.remove('ring-2', 'ring-primary');
+    }, 400);
+
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'scale-100');
+      toast.classList.add('opacity-0', 'scale-95');
+    }, 2200);
+  }
+
+  function copyShareLink(url) {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(url);
+    }
+    const toast = document.getElementById('toast-pill');
+    const toastText = document.getElementById('toast-text');
+    toastText.innerText = 'Share Link Copied!';
+    toast.classList.remove('opacity-0', 'scale-95');
+    toast.classList.add('opacity-100', 'scale-100');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'scale-100');
+      toast.classList.add('opacity-0', 'scale-95');
+    }, 2000);
+  }
+
+  // Micro-interaction: Upvote Heart Animation
+  function toggleHeart(btn) {
+    const icon = btn.querySelector('.heart-icon');
+    const isLiked = icon.style.fontVariationSettings && icon.style.fontVariationSettings.includes("'FILL' 1");
+    
+    if (isLiked) {
+      icon.style.fontVariationSettings = "'FILL' 0";
+      icon.classList.remove('text-error');
+      icon.classList.add('text-on-surface');
+    } else {
+      icon.style.fontVariationSettings = "'FILL' 1";
+      icon.classList.remove('text-on-surface');
+      icon.classList.add('text-error');
+      
+      // Heart burst animation
+      icon.animate([
+        { transform: 'scale(1)' },
+        { transform: 'scale(1.4)' },
+        { transform: 'scale(1)' }
+      ], {
+        duration: 350,
+        easing: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+      });
+    }
+  }
+
+  // Micro-interaction: Bookmark Ribbon Toggle
+  function toggleBookmark(btn) {
+    const icon = btn.querySelector('.bookmark-icon');
+    const isBookmarked = icon.style.fontVariationSettings && icon.style.fontVariationSettings.includes("'FILL' 1");
+
+    if (isBookmarked) {
+      icon.style.fontVariationSettings = "'FILL' 0";
+      icon.classList.remove('text-primary');
+      icon.classList.add('text-on-surface');
+    } else {
+      icon.style.fontVariationSettings = "'FILL' 1";
+      icon.classList.remove('text-on-surface');
+      icon.classList.add('text-primary');
+
+      const toast = document.getElementById('toast-pill');
+      const toastText = document.getElementById('toast-text');
+      toastText.innerText = 'Saved to Claimed Vault!';
+      toast.classList.remove('opacity-0', 'scale-95');
+      toast.classList.add('opacity-100', 'scale-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100', 'scale-100');
+        toast.classList.add('opacity-0', 'scale-95');
+      }, 1800);
+    }
+  }
+
+  function scrollToTop() {
+    const viewport = document.getElementById('snap-feed-viewport');
+    if (viewport) {
+      viewport.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/80 backdrop-blur-xl" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-margin"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-space-2xs transition-colors text-primary font-semibold" data-path="signal-feed" href="#"><span class="material-symbols-outlined text-[24px]">play_circle</span><span class="font-label-sm text-label-sm tracking-wide uppercase">Feed</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-space-2xs text-on-surface-variant transition-colors" data-path="explore-radar" href="#"><span class="material-symbols-outlined text-[24px]">explore</span><span class="font-label-sm text-label-sm tracking-wide uppercase">Radar</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-space-2xs text-on-surface-variant transition-colors" data-path="saved-deals" href="#"><span class="material-symbols-outlined text-[24px]">bookmark</span><span class="font-label-sm text-label-sm tracking-wide uppercase">Claimed</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-space-2xs text-on-surface-variant transition-colors" data-path="operator-profile" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-sm text-label-sm tracking-wide uppercase">Profile</span></a></div></nav></body></html>

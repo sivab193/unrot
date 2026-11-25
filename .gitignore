@@ -1,0 +1,6 @@
+.DS_Store
+stitch_minimal_tech_news_app.zip
+node_modules/
+dist/
+.env
+.env.local
